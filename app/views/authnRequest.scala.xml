@@ -1,0 +1,10 @@
+<samlp:AuthnRequest
+  xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+  ID="ID_@java.util.UUID.randomUUID().toString()"
+  Version="2.0"
+  IssueInstant="@java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)"
+  Destination="https://hetman-int.epuap.gov.pl/DracoEngine2/draco.jsf"
+  IsPassive="false"
+  AssertionConsumerServiceURL="http://localhost:9000/authenticated">
+  <samla:Issuer xmlns:samla="urn:oasis:names:tc:SAML:2.0:assertion">TestIW01</samla:Issuer>
+</samlp:AuthnRequest>
