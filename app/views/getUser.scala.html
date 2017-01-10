@@ -1,5 +1,7 @@
-@(sessionId: String)
+@(sessionId: String, user: models.User)
 
 @main(sessionId) {
   <p>Dane użytkownika:</p>
+  <p>Identyfikator: @user.id</p>
+  <p>Nazwa: @user.name</p>
 }
