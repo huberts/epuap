@@ -16,8 +16,12 @@ class ApplicationController @Inject() (configuration: Configuration) extends Con
     request.session.get("EPUAP_SESSION_ID").fold(
       Redirect(routes.ApplicationController.sendAuthnRequest())
     )(
-      sessionId => Ok("Logged in via EPUAP with sessionId=" + sessionId)
+      sessionId => Ok(views.html.index(sessionId))
     )
+  }
+
+  def invalidate = Action {
+    Redirect(routes.ApplicationController.index()).withNewSession
   }
 
   def sendAuthnRequest = Action { request =>

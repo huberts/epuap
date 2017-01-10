@@ -1,6 +1,5 @@
-@()
+@(sessionId: String)
 
-@main("Welcome to Play") {
-  <h1>EPUAP TESTER</h1>
-  
+@main(sessionId) {
+  <a href="@routes.WSController.getUser">Pobierz dane użytkownika</a>
 }
