@@ -7,3 +7,7 @@ target
 /.project
 /.settings
 /RUNNING_PID
+app-2.11/
+project/project/
+test-2.11/
+test/resources/
