@@ -1,0 +1,8 @@
+@(sessionId: String)
+
+<idp:reqResolveUserId
+  xmlns:idp="http://www.cpi.gov.pl/dt/IdpIdentityInfoServiceSchema"
+  callId="@scala.util.Random.nextInt(Integer.MAX_VALUE)"
+  requestTimestamp="@java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)">
+  <idp:assertionId>@sessionId</idp:assertionId>
+</idp:reqResolveUserId>

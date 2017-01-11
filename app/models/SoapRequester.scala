@@ -23,7 +23,6 @@ object SoapRequester {
     val request = MessageFactory.newInstance.createMessage()
     request.getSOAPBody.addDocument(buildDocument(body))
     request.getMimeHeaders.addHeader("SOAPAction", "https://konsolahetman-int.epuap.gov.pl/axis2/services/EngineSAMLArtifact/artifactResolve")
-    request.saveChanges()
     request
   }
 
