@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlp:AuthnRequest
+xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+ID="ID_@java.util.UUID.randomUUID().toString()"
+Version="2.0"
+IssueInstant="@java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)"
+Destination="https://pz.gov.pl/dt/SingleSignOnService"
+ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"
+AssertionConsumerServiceURL="http://localhost:9000/authenticated">
+  <samla:Issuer xmlns:samla="urn:oasis:names:tc:SAML:2.0:assertion">TestIW01</samla:Issuer>
+  <samlp:NameIDPolicy AllowCreate="false" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
+</samlp:AuthnRequest>

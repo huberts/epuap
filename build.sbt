@@ -7,9 +7,13 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.8"
 
+resolvers += Resolver.url("OpenSAML", url("https://build.shibboleth.net/nexus/content/repositories/releases/"))
+
 libraryDependencies += filters
 libraryDependencies += ws
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
+libraryDependencies += "org.opensaml" % "opensaml" % "2.6.6"
+libraryDependencies += "org.apache.ws.security" % "wss4j" % "1.6.19"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "pl.systherminfo.controllers._"

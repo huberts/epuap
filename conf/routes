@@ -9,6 +9,9 @@ GET     /authenticate               controllers.ApplicationController.sendAuthnR
 GET     /authenticated              controllers.ApplicationController.resolveArtifact(SAMLart: Option[String])
 GET     /invalidate                 controllers.ApplicationController.invalidate
 
+GET     /index2                     controllers.AuthPostController.index
+GET     /authRequestPage            controllers.AuthPostController.authRequestPage
+
 GET     /getUser                    controllers.WSController.getUser
 
 # Map static resources from the /public folder to the /assets URL path

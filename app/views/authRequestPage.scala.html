@@ -1,0 +1,13 @@
+@(SAMLRequest: String)
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>EPUAP Zaloguj się</title>
+  </head>
+  <body>
+    <form action="https://pz.gov.pl/dt/SingleSignOnService" method="post">
+      <input type="hidden" name="SAMLRequest" value="@SAMLRequest"/>
+      <button type="submit">Zaloguj się przez EPUAP</button>
+    </form>
+  </body>
+</html>
